@@ -12,12 +12,25 @@
 </head>
 
 <body>
-    <div class="mt-4 p-5 bg-primary text-white rounded" id="hideBanner">
+    <div class="mt-4 p-5 bg-primary text-white rounded " id="hideBanner">
         <h1>Code Quiz</h1>
         <p>Are you smarter than a 5th grader?</p>
-        <input type="submit" class="btn btn-danger" value="Start Quiz">
+        <input type="submit" class="btn btn-danger" value="Start Quiz" id="startQuiz">
     </div>
-    <div class="container mt-5 p-5 bg-dark text-white rounded" id="showQuiz"></div>
+    <div class="mt-4 p-5 bg-primary text-white rounded mx-auto " id="showTimer">
+        <div class ="font-weight-bold "id = "timerDisplay"></div>
+        <div class="spinner-border text-warning "></div>
+
+    </div>
+    <div class="container mt-5 p-5 bg-dark text-white rounded " id="showQuiz">
+        <!-- Quiz questions -->
+        <div id="answerButtons" class ="btn-group-vertical " style="min-width: 100%; ">
+        <!-- <button type="button" class="btn btn-outline-secondary mw-100">Secondary</button>
+        <button type="button" class="btn btn-outline-secondary mw-100">Secondary</button>
+        <button type="button" class="btn btn-outline-secondary mw-100">Secondary</button>
+        <button type="button" class="btn btn-outline-secondary mw-100">Secondary</button> -->
+        </div>
+    </div>
 
 </body>
 
