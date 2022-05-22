@@ -14,13 +14,13 @@
 <body>
     <div class="mt-4 p-5 bg-primary text-white rounded " id="hideBanner">
         <h1>Code Quiz</h1>
-        <p>You have 60 seconds to complete 10 questions</p>
+        <p>You have 30 seconds to complete 5 questions</p>
         <input type="submit" class="btn btn-danger" value="Start Quiz" id="startQuiz">
     </div>
     <div class="mt-4 p-5 bg-primary text-white rounded mx-auto" id="showTimer">
-        <div class ="fw-bolder" id="currentScore"></div>
-        <p class ="fw-bolder d-inline pb-3" id = "timerDisplay"></p>
-        
+        <div class="badge text-bg-danger" id="Correct"></div>
+        <div class="fw-bolder" id="currentScore"></div>
+        <p class="fw-bolder d-inline pb-3" id="timerDisplay"></p>
     </div>
     <div class="mt-4 p-5 bg-primary text-white rounded " id="hideHighScores">
         <h1></h1>
@@ -28,32 +28,21 @@
     </div>
     <div class="container mt-5 p-5 bg-dark text-white rounded " id="showQuiz">
         <div id="questions" style="min-width: 100%" class="fw-bolder"></div>
-            <!-- Quiz questions -->
-        <div id="answerButtons" class ="btn-group-vertical " style="min-width: 100%; ">
+        <!-- Quiz questions -->
+        <div id="answerButtons" class="btn-group-vertical " style="min-width: 100%; ">
             <!-- Button answers -->
-        <div id="submitName" class ="btn-group-vertical " style="min-width: 100%; "></div>
+            <div id="submitName" class="btn-group-vertical " style="min-width: 100%; "></div>
         </div>
     </div>
+    <div id="Correct" class="container mt-5 p-5rounded text-center" style="min-width: 100%; "></div>
     <div class="container mt-5 p-5 bg-dark text-white rounded " id="hideHighScoresList">
-        <ol class="list-group list-group-numbered " >
+        <ol class="list-group list-group-numbered ">
             <li class="list-group-item d-flex flex-row mb-3">
                 <div class="mx-4">
-                  <div class="fw-bold">Subheading</div>
+                    <div class="fw-bold" id="highScoreUser1">Subheading</div>
                 </div>
-                <span class="badge bg-primary">14</span>
-              </li><li class="list-group-item d-flex flex-row mb-3">
-                <div class="mx-4">
-                  <div class="fw-bold">Subheading</div>
-                </div>
-                <span class="badge bg-primary">14</span>
-              </li>
-              <li class="list-group-item d-flex flex-row mb-3">
-                <div class="mx-4">
-                  <div class="fw-bold">Subheading</div>
-                </div>
-                <span class="badge bg-primary">14</span>
-              </li>
-          </ol>
+                <span class="badge bg-primary" id="highScore1">14</span>
+        </ol>
     </div>
 
 </body>
