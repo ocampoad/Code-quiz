@@ -1,6 +1,5 @@
 const containerEl = $(".container");
 const btnContainer = $("#answerButtons")
-// containerEl.prepend('hello')
 
 $("#showQuiz").hide();
 $('#showTimer').hide();
@@ -70,12 +69,14 @@ $("#answerButtons").click(function () {
         $("#Correct").removeClass("text-bg-danger");
         $("#Correct").addClass("text-bg-success");
         $("#Correct").text("correct!");
+        $("#minusPoints").text("")
         ;
     } else {
         timeStart = timeStart - 3;
         $("#Correct").removeClass("text-bg-success");
         $("#Correct").addClass("text-bg-danger");
         $("#Correct").text("wrong!");
+        $("#minusPoints").text("-3")
     }
     questionNum = questionNum + 1;
     btnContainer.text("");
