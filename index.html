@@ -13,17 +13,20 @@
 
 <body>
     <div class="mt-4 p-5 bg-primary text-white rounded " id="hideBanner">
+        <!-- intro banner -->
         <h1>Code Quiz</h1>
         <p>You have 30 seconds to complete 5 questions</p>
         <input type="submit" class="btn btn-danger" value="Start Quiz" id="startQuiz">
     </div>
     <div class="mt-4 p-5 bg-primary text-white rounded mx-auto" id="showTimer">
+        <!-- timer and quiz banner -->
         <div class="badge text-bg-danger" id="Correct"></div>
         <div class="fw-bolder" id="currentScore"></div>
         <p class="fw-bolder d-inline pb-3" id="timerDisplay"></p>
         <div class="badge text-bg-danger" id="minusPoints"></div>
     </div>
     <div class="mt-4 p-5 bg-primary text-white rounded " id="hideHighScores">
+        <!-- finished quiz and high score banner -->
         <h1></h1>
         <input type="submit" class="btn btn-danger" value="Play again" id="playAgianQuiz">
     </div>
@@ -37,7 +40,9 @@
     </div>
     <div id="Correct" class="container mt-5 p-5rounded text-center" style="min-width: 100%; "></div>
     <div class="container mt-5 p-5 bg-dark text-white rounded " id="hideHighScoresList">
-        <ol class="list-group list-group-numbered " id="highScoreUser1"></ol>
+        <ol class="list-group list-group-numbered " id="highScoreUser1">
+            <!-- Display high scores in descending order -->
+        </ol>
     </div>
 
 </body>
