@@ -70,7 +70,7 @@ $("#answerButtons").click(function () {
         $("#Correct").addClass("text-bg-success");
         $("#Correct").text("correct!");
         $("#minusPoints").text("")
-        ;
+            ;
     } else {
         timeStart = timeStart - 3;
         $("#Correct").removeClass("text-bg-success");
@@ -139,17 +139,25 @@ const renderSubmit = () => {
             alert("Please input your name");
             return
         };
-        const HighScores = [{
-            name: userName,
-            score: finalScore,
-        }];
-        // if (lastScore !== null) {
-        //     HighScores.push(lastScore);
-        // }
+        if (lastScore !== null) {
+
+            lastScore["name"][lastScore["name"].length] = userName;
+            lastScore["score"][lastScore["score"].length] = finalScore;
+            var HighScores = {
+                "name": lastScore["name"],
+                "score": lastScore["score"],
+            }
+            console.log("null")
+        } else {
+            var HighScores = {
+                "name": [userName],
+                "score": [finalScore],
+            };
+        }
         localStorage.setItem("HighScores", JSON.stringify(HighScores))
         $("#questions").text('');
         highScoreDisplay();
-    });
+    })
 }
 
 
@@ -158,8 +166,11 @@ const highScoreDisplay = () => {
     $("#hideHighScoresList").show();
     $('#hideHighScores').children("h1").text("High Scores")
     const currentscore = JSON.parse(localStorage.getItem("HighScores"));
-    $('#highScoreUser1').text( currentscore[0]["name"]);
-    $('#highScore1').text( currentscore[0]["score"]);
+    for (i = 0; i < currentscore["name"].length; i++) {
+        $('#highScoreUser1').append("<li class='list-group-item d-flex flex-row mb-3'><div class='mx-4'><div class='fw-bold'>" + currentscore["name"][i] + "</div></div><span class='badge bg-primary' id='highScore1'>" + currentscore["score"][i] + "</span></li>");
+    }
+    // $('#highScoreUser1').text(currentscore["name"][]);
+    // $('#highScore1').text(currentscore[0]["score"]);
 }
 
 $("#playAgianQuiz").click(function () {
